@@ -5,13 +5,14 @@
 //  Created by 孙超 on 2018/9/30.
 //  Copyright © 2018年 孙超. All rights reserved.
 //
+#import "UItableView+SCBuilder.h"
 #import "UITextField+SCBuilder.h"
 #import "UILabel+SCBuilder.h"
 #import "UIButton+SCBuilder.h"
 #import <Masonry.h>
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @end
 
@@ -52,7 +53,45 @@
         make.top.equalTo(label.mas_bottom).offset(10);
     }];
     
+//    __weak typeof(self) WeakSelf = self;
+//    __strong typeof(WeakSelf) StrongSelf = WeakSelf;
+    
+    UITableView *tableView = UITableView.builder().estimatedRowHeight(44).delegate(self).dataSource(self).build();
+    
+    [self.view addSubview:tableView];
+    
+    [tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(textField.mas_bottom).offset(0);
+        make.left.right.bottom.equalTo(self.view);
+    }];
+    
+    
     
 }
+
+#pragma mark - UItableViewDataSource
+#pragma mark -
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 8;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"hello"];
+    }
+    
+    cell.textLabel.text = @"888888";
+    
+    return cell;
+}
+
+
+
 @end
 

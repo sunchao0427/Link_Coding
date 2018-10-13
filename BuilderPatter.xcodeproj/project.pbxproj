@@ -23,6 +23,8 @@
 		565ECED42160AB79006F4043 /* SCTextFieldBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 565ECED32160AB79006F4043 /* SCTextFieldBuilder.m */; };
 		565ECED72160B30B006F4043 /* UITextField+SCBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 565ECED62160B30B006F4043 /* UITextField+SCBuilder.m */; };
 		66A5BD4BDC2015877B55A056 /* libPods-BuilderPatterTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC72FB10E62B3F051F500766 /* libPods-BuilderPatterTests.a */; };
+		AF18BBE3217240BF005A1AFF /* SCTableViewBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = AF18BBE2217240BF005A1AFF /* SCTableViewBuilder.m */; };
+		AF18BBE621724C8F005A1AFF /* UITableView+SCBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = AF18BBE521724C8F005A1AFF /* UITableView+SCBuilder.m */; };
 		F49BD8B24F937582DF8791B7 /* libPods-BuilderPatterUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B8071984F9BEDC0265DE9F0 /* libPods-BuilderPatterUITests.a */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +80,10 @@
 		565ECED62160B30B006F4043 /* UITextField+SCBuilder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+SCBuilder.m"; sourceTree = "<group>"; };
 		5A872CBEBAA7FEF054521686 /* Pods-BuilderPatter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuilderPatter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BuilderPatter/Pods-BuilderPatter.debug.xcconfig"; sourceTree = "<group>"; };
 		7CD313112DEF4AAE246F2839 /* libPods-BuilderPatter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BuilderPatter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF18BBE1217240BF005A1AFF /* SCTableViewBuilder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCTableViewBuilder.h; sourceTree = "<group>"; };
+		AF18BBE2217240BF005A1AFF /* SCTableViewBuilder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCTableViewBuilder.m; sourceTree = "<group>"; };
+		AF18BBE421724C8F005A1AFF /* UITableView+SCBuilder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+SCBuilder.h"; sourceTree = "<group>"; };
+		AF18BBE521724C8F005A1AFF /* UITableView+SCBuilder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+SCBuilder.m"; sourceTree = "<group>"; };
 		B13419215D468325C73401DC /* Pods-BuilderPatterUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuilderPatterUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BuilderPatterUITests/Pods-BuilderPatterUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CA6739EC976A08F2FB0A8AE2 /* Pods-BuilderPatterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuilderPatterTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BuilderPatterTests/Pods-BuilderPatterTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EC72FB10E62B3F051F500766 /* libPods-BuilderPatterTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BuilderPatterTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,6 +142,7 @@
 		565ECE8D21606B1C006F4043 /* BuilderPatter */ = {
 			isa = PBXGroup;
 			children = (
+				AF18BBE02172407A005A1AFF /* UItableView */,
 				565ECED12160AB59006F4043 /* UItextField */,
 				565ECEC721609B52006F4043 /* UIlabel */,
 				565ECEC621609B38006F4043 /* UIButton */,
@@ -211,6 +218,17 @@
 				4B8071984F9BEDC0265DE9F0 /* libPods-BuilderPatterUITests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AF18BBE02172407A005A1AFF /* UItableView */ = {
+			isa = PBXGroup;
+			children = (
+				AF18BBE1217240BF005A1AFF /* SCTableViewBuilder.h */,
+				AF18BBE2217240BF005A1AFF /* SCTableViewBuilder.m */,
+				AF18BBE421724C8F005A1AFF /* UITableView+SCBuilder.h */,
+				AF18BBE521724C8F005A1AFF /* UITableView+SCBuilder.m */,
+			);
+			path = UItableView;
 			sourceTree = "<group>";
 		};
 		DE33749067BA0A77CE6AE072 /* Pods */ = {
@@ -436,9 +454,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				565ECE9321606B1C006F4043 /* ViewController.m in Sources */,
+				AF18BBE3217240BF005A1AFF /* SCTableViewBuilder.m in Sources */,
 				565ECEC221606B49006F4043 /* SCButtonBuilder.m in Sources */,
 				565ECECD21609B98006F4043 /* SCLabelBUilder.m in Sources */,
 				565ECE9E21606B2D006F4043 /* main.m in Sources */,
+				AF18BBE621724C8F005A1AFF /* UITableView+SCBuilder.m in Sources */,
 				565ECED02160A99D006F4043 /* UILabel+SCBuilder.m in Sources */,
 				565ECED42160AB79006F4043 /* SCTextFieldBuilder.m in Sources */,
 				565ECED72160B30B006F4043 /* UITextField+SCBuilder.m in Sources */,
